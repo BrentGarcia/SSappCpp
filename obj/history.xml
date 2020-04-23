@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="gcc noversion nomachine -std=c++14 -c -I../../../../../../usr/include -I../../../../../../usr/include/jsoncpp -I../../../../../../usr/local/include">
+      <target file="MediaClientGui.o" lastModified="171a5fc4e9d">
+         <source file="../src/client/MediaClientGui.cpp" lastModified="1717a6e6f30"/>
+      </target>
+      <target file="SeriesSeason.o" lastModified="171a5fc4b00">
+         <source file="../src/client/SeriesSeason.cpp" lastModified="17186db8690"/>
+      </target>
+      <target file="Episode.o" lastModified="171a5fc5351">
+         <source file="../src/client/Episode.cpp" lastModified="17186da9c30"/>
+      </target>
+      <target file="SeasonLibrary.o" lastModified="171a5fc4d7d">
+         <source file="../src/client/SeasonLibrary.cpp" lastModified="17186dc9fd0"/>
+      </target>
+      <target file="samplemain.o" lastModified="171a5fc51bd">
+         <source file="../src/client/samplemain.cpp" lastModified="17186dd7a90"/>
+      </target>
+   </processor>
+</history>
