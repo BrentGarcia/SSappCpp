@@ -106,16 +106,33 @@ bool SeasonLibrary::removeSeriesSeason(string seriesSeasonToRemove){
    return true;
 }
 
-SeriesSeason SeasonLibrary::get(string aTitle){
+Json::Value SeasonLibrary::get(string aTitle){
    SeriesSeason aMedia = media[aTitle];
-   return aMedia;
+   Json::Value newMedia = aMedia.toJson();
+   return newMedia;
 }
 
-vector<string> SeasonLibrary::getTitles(){
+Json::Value SeasonLibrary::getTitles(){
+   Json::Value ret(Json::arrayValue);
    vector<string> myVec;
    for(map<string,SeriesSeason>::iterator it = media.begin();
                                               it != media.end();++it){
       myVec.push_back(it->first);
    }
-   return myVec;
+   for(std::vector<string>::iterator it = myVec.begin(); it!=myVec.end();++it) {
+      ret.append(Json::Value(*it));
+   }
+   return ret;
 }
+
+//Example
+
+
+//vector<string> SeasonLibrary::getTitles(){
+//   vector<string> myVec;
+//   for(map<string,SeriesSeason>::iterator it = media.begin();
+//                                              it != media.end();++it){
+//     myVec.push_back(it->first);
+//   }
+//   return myVec;
+//}

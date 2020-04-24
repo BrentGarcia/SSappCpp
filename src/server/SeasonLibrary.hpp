@@ -42,6 +42,7 @@ public:
    bool addSeriesSeason(SeriesSeason seriesSeasonToAdd);
    bool removeSeriesSeason(string seriesSeasonToRemove);
    string serviceInfo();
-   SeriesSeason get(string aTitle);
-   std::vector<string> getTitles();
+   Json::Value get(string aTitle);
+   //std::vector<string> getTitles();
+   Json::Value getTitles();
 };

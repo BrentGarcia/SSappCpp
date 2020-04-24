@@ -1,0 +1,29 @@
+[
+    {
+        "method": "toJsonFile",
+        "params":[ ],
+        "returns": true
+    },
+    {   // addSeriesSeason(JsonOfASeasonSeries) --> bool
+        "method": "addSeriesSeason",
+        "params":[{ }],
+        "returns": true
+    },
+    {   // removeSeriesSeason(string) --> bool
+        "method": "removeSeriesSeason",
+        "params":["The Office"],
+        "returns": true
+    },
+    {   // get(string) --> jsonOfAStudent
+        "method": "get",
+        "params":["The Office"],
+        "returns":{ }
+    },
+    {   // getTitles() --> json array of strings of student names
+        "method": "getTitles",
+        "params":[],
+        "returns": [ ]
+    }
+]
+
+

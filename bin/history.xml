@@ -1,14 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
-   <processor signature="gcc -L../../../../../../../usr/lib -lstdc++ -lfltk -lfltk_images -lcurl -ljsoncpp -lpthread -L../../../../../../../usr/local/lib -lcurlpp">
-      <target file="guiSample" lastModified="171a5fc540d">
-         <source file="../../../../../../../usr/local/lib/libcurlpp.a" lastModified="171766621a8"/>
-         <source file="../../../../../../../usr/local/lib/libcurlpp.so.1.0.0" lastModified="17176662d60"/>
-         <source file="../obj/SeriesSeason.o" lastModified="171a5fc4b00"/>
-         <source file="../obj/SeasonLibrary.o" lastModified="171a5fc4d7d"/>
-         <source file="../obj/MediaClientGui.o" lastModified="171a5fc4e9d"/>
-         <source file="../obj/samplemain.o" lastModified="171a5fc51bd"/>
-         <source file="../obj/Episode.o" lastModified="171a5fc5351"/>
+   <processor signature="gcc -L../../../../../../../usr/local/lib -ljsoncpp -ljsonrpccpp-server -ljsonrpccpp-common -lmicrohttpd -lstdc++">
+      <target file="seasonRPCServer" lastModified="171a9f9e3c3">
+         <source file="../obj/server/SeriesSeason.o" lastModified="171a9f8cd03"/>
+         <source file="../obj/server/SeasonLibrary.o" lastModified="171a9f8cf1f"/>
+         <source file="../obj/server/SeasonServer.o" lastModified="171a9f9e367"/>
+         <source file="../obj/server/Episode.o" lastModified="171a9f8d29f"/>
       </target>
    </processor>
 </history>
