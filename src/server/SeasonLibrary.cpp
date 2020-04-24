@@ -75,7 +75,8 @@ bool SeasonLibrary::initLibraryFromJsonFile(string jsonFileName){
    return ret;
 }
 
-bool SeasonLibrary::toJsonFile(string jsonFileName){
+bool SeasonLibrary::toJsonFile(){
+   string jsonFileName = "series10.json";
    bool ret = false;
    Json::Value jsonLib;
    for(std::map<string,SeriesSeason>::iterator i = media.begin();

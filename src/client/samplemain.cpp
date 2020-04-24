@@ -1,5 +1,5 @@
 #include "MediaClientGui.cpp"
-#include "SeasonLibrary.hpp"
+#include "../server/SeasonLibrary.hpp"
 
 #include <FL/Fl.H>
 #include <FL/Fl_Window.H>
@@ -389,5 +389,7 @@ int main(int argc, char * argv[]) {
    std::string omdbkey = (argc>2)?argv[2]:"omdbkey";
    std::string windowTitle = developer + "'s SeriesSeason Browser";
    MediaClient cm(windowTitle.c_str(),omdbkey.c_str());
+   //HttpClient httpclient(host);
+   //studentcollectionstub sc(httpclient);
    return (Fl::run());
 }

@@ -38,7 +38,7 @@ public:
    ~SeasonLibrary();
 
    bool initLibraryFromJsonFile(string jsonFileName);
-   bool toJsonFile(string jsonFileName);
+   bool toJsonFile();
    bool addSeriesSeason(SeriesSeason seriesSeasonToAdd);
    bool removeSeriesSeason(string seriesSeasonToRemove);
    string serviceInfo();

@@ -85,12 +85,13 @@ string SeasonServer::serviceInfo(){
 
 bool SeasonServer::toJsonFile(){
    cout << "saving collection to students.json" << endl;
-   bool ret = library->toJsonFile("students.json");
+   //bool ret = library->toJsonFile("series10.json");
+   bool ret = library->toJsonFile();
    return ret;
 }
 
 bool SeasonServer::initLibraryFromJsonFile(){
-   cout << "restoring collection from series.json" << endl;
+   cout << "restoring collection from s.json" << endl;
    bool ret = library->initLibraryFromJsonFile("series.json");
    return ret;
 }

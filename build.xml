@@ -61,7 +61,7 @@
       <property name="cxxflag" value="-std=c++14"/>
       <property name="includepath" value="/usr/local/include:/usr/include/jsoncpp"/>
       <property name="client.lib.path" value="/usr/local/lib"/>
-      <property name="client.lib.list" value="jsoncpp,jsonrpccpp-client,jsonrpccpp-common,microhttpd,stdc++"/>
+      <property name="client.lib.list" value="fltk,fltk_images, pthread, curlpp, curl,jsoncpp,jsonrpccpp-client,jsonrpccpp-common,microhttpd,stdc++"/>
       <property name="server.lib.path" value="/usr/local/lib"/>
       <property name="server.lib.list" value="jsoncpp,jsonrpccpp-server,jsonrpccpp-common,microhttpd,stdc++"/>
 
@@ -84,24 +84,24 @@
 
    <target name="generate.client.stub" depends="prepare">
       <exec dir="${basedir}" executable="jsonrpcstub">
-         <arg line="${json.file.name} --cpp-client=studentcollectionstub"/>
+         <arg line="${json.file.name} --cpp-client=seasoncollectionstub"/>
       </exec>
-      <copy file="studentcollectionstub.h"
-            tofile="${src}/client/studentcollectionstub.h"/>
-      <delete file="studentcollectionstub.h"/>
+      <copy file="seasoncollectionstub.h"
+            tofile="${src}/client/seasoncollectionstub.h"/>
+      <delete file="seasoncollectionstub.h"/>
    </target>
 
    <target name="build.client" depends="generate.client.stub">
       <cc outtype="executable" subsystem="console"
-          outfile="${dist.dir}/studentRPCClient"
+          outfile="${dist.dir}/seasonRPCClient"
           objdir="${obj.dir}/client">
          <compilerarg value="${cxxflag}"/>
          <includepath>
             <pathelement path="${includepath}"/>
          </includepath>
          <libset dir="${client.lib.path}" libs="${client.lib.list}"/>
-         <fileset dir="${src}/client" includes="StudentTerminalClient.cpp"/>
-         <fileset dir="${src}/server" includes="Student.cpp"/>
+         <fileset dir="${src}/client" includes="samplemain.cpp"/>
+         <fileset dir="${src}/server" includes="SeasonSeries.cpp, Episode.cpp"/>
       </cc>
    </target>
 
